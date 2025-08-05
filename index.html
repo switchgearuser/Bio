@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой GitHub Профиль</title>
+    <title>switchgearuser - GitHub Profile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,6 +11,11 @@
     <div class="container">
         <!-- Header Section -->
         <header class="header">
+            <div class="theme-toggle">
+                <button class="theme-btn" id="themeToggle" title="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
             <div class="avatar">
                 <img src="img_3664.png" alt="Аватар switchgearuser" />
             </div>
@@ -60,44 +65,45 @@
             <h2>Проекты</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>TempMail</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/switchgearuser/TempMail" target="_blank">
+                    <a href="https://github.com/switchgearuser/TempMail" target="_blank" class="project-link">
+                        <div class="project-header">
+                            <h3>TempMail</h3>
+                            <div class="project-links">
                                 <i class="fab fa-github"></i>
-                            </a>
+                            </div>
                         </div>
-                    </div>
-                    <p class="project-description">
-                        Сервис для создания временных email адресов. Позволяет получать письма 
-                        без регистрации и защищает основную почту от спама.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">API</span>
-                    </div>
+                        <p class="project-description">
+                            Сервис для создания временных email адресов. Позволяет получать письма 
+                            без регистрации и защищает основную почту от спама.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">API</span>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>Скоро будет больше проектов</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/switchgearuser" target="_blank">
+                    <a href="https://github.com/switchgearuser" target="_blank" class="project-link">
+                        <div class="project-header">
+                            <h3>Скоро будет больше проектов</h3>
+                            <div class="project-links">
                                 <i class="fab fa-github"></i>
-                            </a>
+                            </div>
                         </div>
-                    </div>
-                    <p class="project-description">
-                        Следите за моим GitHub профилем для новых интересных проектов 
-                        и разработок.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">В разработке</span>
-                    </div>
+                        <p class="project-description">
+                            Следите за моим GitHub профилем для новых интересных проектов 
+                            и разработок.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">В разработке</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
