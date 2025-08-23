@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Документация GitHub Pages
+    url: https://docs.github.com/en/pages
+    about: Официальная документация по настройке GitHub Pages
+  - name: 🆘 Поддержка GitHub
+    url: https://support.github.com/
+    about: Обратитесь в поддержку GitHub если у вас технические проблемы
+  - name: 💬 Обсуждения
+    url: https://github.com/switchgearuser/switchgearuser.github.io/discussions
+    about: Задайте вопрос или поделитесь идеями в обсуждениях
+  - name: 📖 Wiki
+    url: https://github.com/switchgearuser/switchgearuser.github.io/wiki
+    about: Дополнительная документация и руководства
