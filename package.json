@@ -1,8 +1,45 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "switchgearuser-github-profile",
+  "version": "1.0.0",
+  "description": "Персональная страница-портфолио для GitHub Pages",
   "private": true,
   "scripts": {
-    "build": "echo 'no build script'"
+    "dev": "python3 -m http.server 8000",
+    "dev:node": "npx serve .",
+    "dev:php": "php -S localhost:8000",
+    "build": "echo 'Static site - no build required'",
+    "lint:html": "npx htmlhint index.html 404.html",
+    "lint:css": "npx stylelint styles.css",
+    "lint:js": "npx eslint script.js",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "format": "npx prettier --write .",
+    "test": "echo 'No tests specified'",
+    "deploy": "git add . && git commit -m 'Update site' && git push origin main"
+  },
+  "keywords": [
+    "github-pages",
+    "portfolio",
+    "developer",
+    "static-site",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "switchgearuser",
+  "license": "MIT",
+  "homepage": "https://switchgearuser.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/switchgearuser/switchgearuser.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/switchgearuser/switchgearuser.github.io/issues"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^15.11.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "serve": "^14.2.1"
   }
 }
