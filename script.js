@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.body
   const themeIcon = themeToggle.querySelector("i")
 
+  // Список доступных тем для циклического переключения
+  const themes = ["light", "dark", "ocean", "sunset", "forest", "rose", "mint", "amber"]
+
   // Проверяем сохраненную тему
   const savedTheme = localStorage.getItem("theme") || "light"
   body.setAttribute("data-theme", savedTheme)
@@ -11,7 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Обработчик клика на кнопку переключения темы
   themeToggle.addEventListener("click", () => {
     const currentTheme = body.getAttribute("data-theme")
-    const newTheme = currentTheme === "light" ? "dark" : "light"
+    const currentIndex = themes.indexOf(currentTheme)
+    const nextIndex = (currentIndex + 1) % themes.length
+    const newTheme = themes[nextIndex] || "light"
 
     // Добавляем анимацию переключения
     body.style.transition = "all 0.3s ease"
@@ -28,13 +33,20 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   function updateThemeIcon(theme) {
-    if (theme === "dark") {
-      themeIcon.className = "fas fa-sun"
-      themeToggle.title = "Переключить на светлую тему"
-    } else {
-      themeIcon.className = "fas fa-moon"
-      themeToggle.title = "Переключить на темную тему"
+    const themeToIcon = {
+      light: { icon: "fas fa-moon", title: "Тема: Светлая (клик — тёмная)" },
+      dark: { icon: "fas fa-sun", title: "Тема: Тёмная (клик — ocean)" },
+      ocean: { icon: "fas fa-water", title: "Тема: Ocean (клик — sunset)" },
+      sunset: { icon: "fas fa-cloud-sun", title: "Тема: Sunset (клик — forest)" },
+      forest: { icon: "fas fa-leaf", title: "Тема: Forest (клик — rose)" },
+      rose: { icon: "fas fa-heart", title: "Тема: Rose (клик — mint)" },
+      mint: { icon: "fas fa-icicles", title: "Тема: Mint (клик — amber)" },
+      amber: { icon: "fas fa-star", title: "Тема: Amber (клик — light)" },
     }
+
+    const meta = themeToIcon[theme] || themeToIcon.light
+    themeIcon.className = meta.icon
+    themeToggle.title = meta.title
   }
 
   // Добавляем анимацию появления элементов при загрузке
